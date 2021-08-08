@@ -13,9 +13,9 @@ subscription_id=
 batch_rg="batch-ws-rg"
 # Region
 region="westeurope"
-# Unique batch account name (e.g. batchwastorage3245353)
+# Unique batch account name (e.g. batchwsaccount3245353)
 batch_account_name=
-# Unique storage account name
+# Unique storage account name (e.g. batchwastorage3245353)
 storage_account_name=
 # VNET name
 batch_vnet_name="batch-ws-vnet"
