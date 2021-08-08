@@ -1,0 +1,38 @@
+{
+  "id": "mpi-task",
+  "displayName": "mpi-task",
+  "commandLine": "/bin/bash -c '$AZ_BATCH_APP_PACKAGE_mpi_batch_1_0_0/mpi_batch/run_mpi.sh'",
+  "resourceFiles": [],
+  "applicationPackageReferences": [
+    {
+      "applicationId": "mpi_batch",
+      "version": "1.0.0"
+    }
+  ],
+  "environmentSettings": [
+    {
+      "name": "NODES",
+      "value": "2"
+    },
+    {
+      "name": "PPN",
+      "value": "120"
+    }
+  ],
+  "constraints": {
+    "maxWallClockTime": "P10675199DT2H48M5.477S",
+    "maxTaskRetryCount": 2,
+    "retentionTime": "P7D"
+  },
+  "userIdentity": {
+    "autoUser": {
+      "scope": "pool",
+      "elevationLevel": "nonadmin"
+    }
+  },
+  "multiInstanceSettings": {
+    "coordinationCommandLine": "/bin/bash -c env",
+    "numberOfInstances": 2,
+    "commonResourceFiles": []
+  }
+}
