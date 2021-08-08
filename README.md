@@ -1,6 +1,6 @@
 # azure-batch-workshop
 This respository is to provide basic material to run and intrdouction into Azure Batch workshp.
-To be able to run the scripts, you need to craete a configuration file called variablñes.sh within the same directory wich defines the necessary variables.
+To be able to run the scripts, you need to craete a configuration file called variables.sh within the same directory:
 
 ```shell-script
 #!/bin/bash
