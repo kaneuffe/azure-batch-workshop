@@ -72,6 +72,7 @@ module load mpi/hpcx
 echo "Compiling mpi_hello_world.c file"
 mpicc -o mpi_hello_world mpi_hello_world.c
 
+echo "Deleting source file"
 rm  mpi_hello_world.c
 
 cd ..
