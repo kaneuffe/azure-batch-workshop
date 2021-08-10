@@ -64,3 +64,7 @@ EOF
 # Create a batch pool
 az batch pool create \
     --json-file batchpool_create_${pool_id}.json
+
+# Look at the status of the batch pool
+az batch pool show --pool-id $pool_id \
+    --query "allocationState"
