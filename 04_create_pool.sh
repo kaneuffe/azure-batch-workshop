@@ -16,7 +16,7 @@ EOM
 
 # Create the pool definition JSON file
 # Define the batch pool
-cat << EOF >  batchpool_create_${pool_id}.json
+cat << EOF >  ${pool_id}.json
 {
   "id": "$pool_id",
   "vmSize": "$pool_vm_size",
@@ -63,7 +63,7 @@ EOF
 
 # Create a batch pool
 az batch pool create \
-    --json-file batchpool_create_${pool_id}.json
+    --json-file ${pool_id}.json
 
 # Look at the status of the batch pool
 az batch pool show --pool-id $pool_id \
