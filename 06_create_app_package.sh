@@ -18,8 +18,8 @@ az batch task create \
 
 # Download the app zip file 
 az batch task file download \
-    --job-id Job01 \
-    --task-id task07 \
+    --job-id app-creation-job \
+    --task-id app-creation-task \
     --file-path "wd/mpi_batch.zip" \
     --destination ./mpi_batch.zip
 
@@ -30,8 +30,9 @@ az batch application create \
     --application-name "mpi_batch"
 
 # Upload application package
-az batch application package create
+az batch application package create \
     --resource-group $batch_rg \
     --name $batch_account_name \
     --application-name "mpi_batch" \
-    --default-version 1.0.0
+    --package-file "mpi_batch.zip" \
+    --version-name 1.0.0
