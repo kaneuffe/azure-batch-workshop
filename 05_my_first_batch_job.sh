@@ -10,7 +10,7 @@ az batch job create \
     --id my-first-batch-job \
     --pool-id ${pool_id}
 
-#Create tasks
+# Create tasks
 for i in {1..4}
 do
    az batch task create \
