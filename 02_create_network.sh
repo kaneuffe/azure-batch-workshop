@@ -7,7 +7,7 @@ az network vnet create \
     --name $batch_vnet_name \
     --location $region \
     --resource-group $batch_rg \
-    --address-prefix 10.0.0.0/16 \
+    --address-prefix 10.0.0.0/16
 
 # Create a network security group the subnet.
 az network nsg create \
