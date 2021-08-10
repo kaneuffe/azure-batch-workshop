@@ -66,7 +66,7 @@ az batch pool create \
     --json-file ${pool_id}.json
 
 # Look at the status of the batch pool
-echo "az pool show --pool-id $pool_id --query \"state\""
+echo "az batch pool show --pool-id $pool_id --query \"state\""
 
 az batch pool show --pool-id $pool_id \
     --query "state"
