@@ -16,6 +16,17 @@ az batch task create \
     --job-id app-creation-job \
     --command-line "/bin/bash -c 'wget -L https://raw.githubusercontent.com/kaneuffe/azure-batch-workshop/main/create_app_zip.sh;chmod u+x create_app_zip.sh;./create_app_zip.sh'"
 
+# Wait for the task to finish
+state=$(az batch task show --job-id app-creation-job --task-id app-creation-task --query 'state')
+echo "Job task status"
+echo $state
+while [[ $state != *"completed"* ]]
+do
+    state=$(az batch task show --job-id app-creation-job --task-id app-creation-task --query 'state')
+    echo $state
+    sleep 10
+done
+
 # Download the app zip file 
 az batch task file download \
     --job-id app-creation-job \
