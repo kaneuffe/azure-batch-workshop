@@ -28,6 +28,6 @@ az storage share-rm create \
     --resource-group $batch_rg \
     --storage-account $nfs_storage_account_name \
     --name $nfs_share \
-    --quota 1024 \
+    --quota 100 \
     --enabled-protocols NFS \
     --root-squash NoRootSquash
