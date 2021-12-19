@@ -1,5 +1,5 @@
 # azure-batch-workshop
-This respository is to provide basic material to run and intrdouction into Azure Batch workshp.
+This respository is to provide basic material to run and intrduction into Azure Batch worksohp.
 To be able to run the scripts, you need to craete a configuration file called variables.sh within the same directory:
 
 ```shell-script
@@ -28,3 +28,5 @@ nfs_share="shared"
 # Unique extension for the keyvault name (e.g. kv234)
 keyvault_extension=
 ```
+
+The scripts need to be run after the other and will require contributer of even owner rights to the subscription, later ownlyif the batch service has not been enabled before.
