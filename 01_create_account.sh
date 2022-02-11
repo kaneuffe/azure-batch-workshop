@@ -40,7 +40,7 @@ az storage account create \
     --encryption-services blob
 
 # Find storage key
-storage_key=$( az storage account keys list --account-name "$storage_account_name" --resource-group batch-ws-rg --query [0].value  --output tsv )
+storage_key=$( az storage account keys list --account-name "$storage_account_name" --resource-group $batch_rg --query [0].value  --output tsv )
 echo $storage_key
 
 # Create storage container
