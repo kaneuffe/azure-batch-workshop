@@ -3,8 +3,6 @@
 # Variables
 source variables.sh
 
-pool_id="batch-ws-pool"
-
 # Create job to create the application packahe
 az batch job create \
     --id app-creation-job \

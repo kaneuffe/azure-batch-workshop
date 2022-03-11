@@ -4,8 +4,6 @@
 source variables.sh
 
 compute_subnet_id="/subscriptions/${subscription_id}/resourceGroups/${batch_rg}/providers/Microsoft.Network/virtualNetworks/${batch_vnet_name}/subnets/${compute_subnet_name}"
-pool_id="batch-ws-pool"
-pool_vm_size="STANDARD_F2s_v2"
 nfs_share_hostname="${nfs_storage_account_name}.file.core.windows.net"
 nfs_share_directory="/${nfs_storage_account_name}/shared"
 

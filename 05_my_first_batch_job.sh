@@ -3,8 +3,6 @@
 # Variables
 source variables.sh
 
-pool_id="batch-ws-pool"
-
 # Create job
 az batch job create \
     --id my-first-batch-job \
