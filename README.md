@@ -27,6 +27,12 @@ nfs_storage_account_name="batchwsnfssa" # unique
 nfs_share="shared"
 # Unique extension for the keyvault name (e.g. kv234)
 keyvault_extension=
+# Pool name
+pool_id="batch-ws-pool"
+# SKU of the compute node VM
+pool_vm_size="STANDARD_F2s_v2"
+
+
 ```
 
 The scripts need to be run after the other and will require contributer of even owner rights to the subscription, later ownlyif the batch service has not been enabled before.
