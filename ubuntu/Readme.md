@@ -5,3 +5,4 @@ This version will require InfiniBand equipped compute nodes which need to be con
 ```
 pool_vm_size="STANDARD_HB60rs"
 ```
+This version just runs a simple OSU bw benchmark between two nodes without the requirement for a shared filesystem or and application package.
