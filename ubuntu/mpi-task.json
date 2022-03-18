@@ -1,14 +1,8 @@
 {
   "id": "mpi-task",
   "displayName": "mpi-task",
-  "commandLine": "/bin/bash -c '$AZ_BATCH_APP_PACKAGE_mpi_batch_1_0_0/mpi_batch/run_mpi.sh'",
+  "commandLine": "/bin/bash -c '. /etc/profile.d/modules.sh;module load mpi/hpcx;mpirun -np 2 --host $AZ_BATCH_HOST_LIST -npernode 1 -x LD_LIBRARY_PATH $HPCX_OSU_DIR/osu_bibw'",
   "resourceFiles": [],
-  "applicationPackageReferences": [
-    {
-      "applicationId": "mpi_batch",
-      "version": "1.0.0"
-    }
-  ],
   "environmentSettings": [
     {
       "name": "NODES",
@@ -16,7 +10,7 @@
     },
     {
       "name": "PPN",
-      "value": "60"
+      "value": "1"
     }
   ],
   "constraints": {
@@ -31,7 +25,7 @@
     }
   },
   "multiInstanceSettings": {
-    "coordinationCommandLine": "/bin/bash -c env",
+    "coordinationCommandLine": "/bin/bash -c '. /etc/profile.d/modules.sh;module avail;'",
     "numberOfInstances": 2,
     "commonResourceFiles": []
   }
