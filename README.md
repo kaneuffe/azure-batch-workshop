@@ -1,5 +1,5 @@
 # azure-batch-workshop
-This respository is to provide basic material to run and intrduction into Azure Batch worksohp.
+This respository is to provide basic material to run and introduction into Azure Batch workshop.
 To be able to run the scripts, you need to craete a configuration file called variables.sh within the same directory:
 
 ```shell-script
